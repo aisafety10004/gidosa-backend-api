@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-gidosa-webapp/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/api-gidosa-webapp/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/api-gidosa-webapp",
+  "projects": {
+    "api-gidosa-webapp": {
+      "type": "application",
+      "root": "apps/api-gidosa-webapp",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gidosa-webapp/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gidosa-webapp/tsconfig.app.json"
+      }
+    },
+    "gidosa-rdb": {
+      "type": "library",
+      "root": "libs/gidosa-rdb",
+      "entryFile": "index",
+      "sourceRoot": "libs/gidosa-rdb/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/gidosa-rdb/tsconfig.lib.json"
+      }
+    },
+    "gidosa-common-api": {
+      "type": "library",
+      "root": "libs/gidosa-common-api",
+      "entryFile": "index",
+      "sourceRoot": "libs/gidosa-common-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/gidosa-common-api/tsconfig.lib.json"
+      }
+    },
+    "gidosa-common": {
+      "type": "library",
+      "root": "libs/gidosa-common",
+      "entryFile": "index",
+      "sourceRoot": "libs/gidosa-common/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/gidosa-common/tsconfig.lib.json"
+      }
+    }
+  }
+}
