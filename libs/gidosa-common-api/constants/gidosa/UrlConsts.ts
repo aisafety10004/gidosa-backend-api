@@ -1,4 +1,4 @@
-export class UrlConst {
+export class UrlConsts {
     static readonly PREFIX_API_BASE = '/api';
     static readonly PREFIX_V3_BASE = '/v3';
   
