@@ -1,0 +1,40 @@
+name: gidosa-backend-api dev
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches:
+      - dev
+    #   types: [closed]
+    paths-ignore:
+      - '.github/workflows/deploy-prod-gidosa-backend-api.yml'
+      # - 'public/**'
+  workflow_dispatch:
+  #   # inputs:
+  #   #   region:
+  #   #     required: false
+  #   #     type: string
+  #   #   env:
+  #   #     required: true
+  #   #     type: string
+
+# env:
+#   CS_BUCKET_DEPLOY_NAME: ${{ secrets.CS_BUCKET_DEPLOY_NAME }}
+#   CS_BUCKET_DEPLOY_FOLDER: ${{ secrets.CS_BUCKET_DEPLOY_FOLDER_DEV_AIAPP }}
+#   CODE_DEPLOY_APPLICATION_NAME: ${{ secrets.GCP_CODEDEPLOY_NAME }}
+#   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: ${{ secrets.GCP_CODEDEPLOY_GROUP_NAME_DEV_AIAPP }}
+
+jobs:
+  # 의존성 빌드 테스트
+  build-codedeploy:
+    # environment: dev
+    runs-on: ubuntu-22.04
+    permissions: write-all
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+
+
+        
