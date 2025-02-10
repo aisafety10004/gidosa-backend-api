@@ -52,21 +52,21 @@ export class MemberGeneral extends BaseEntity {
   })
   name: string;
 
-  @Column({
-    type: 'varchar',
-    length: 10,
-    unique: true,
-    comment: '회원 별명',
-  })
-  nick_name: string;
+  // @Column({
+  //   type: 'varchar',
+  //   length: 10,
+  //   unique: true,
+  //   comment: '회원 별명',
+  // })
+  // nick_name: string;
 
-  @Column({
-    type: 'varchar',
-    length: 13,
-    nullable: false,
-    comment: '회원 전화번호',
-  })
-  phone: string;
+  // @Column({
+  //   type: 'varchar',
+  //   length: 13,
+  //   nullable: false,
+  //   comment: '회원 전화번호',
+  // })
+  // phone: string;
 
   @Column({
     type: 'int',

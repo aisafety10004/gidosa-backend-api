@@ -1,5 +1,4 @@
-//import { BaseHttpErrorCode } from '@app/gidosa-common-api/constants/enums/BaseHttpErrorCode';
-import { BaseHttpErrorCode } from '../../../gidosa-common-api/constants/enums/BaseHttpErrorCode';
+import { BaseHttpErrorCode } from '@app/gidosa-common-api/constants/enums/BaseHttpErrorCode';
 import {
     BadRequestException,
     ExecutionContext,
